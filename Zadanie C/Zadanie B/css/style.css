@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: josefin sans, sans-serif;
+    
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding:50px;
+    max-width: 1264px;
+    
+}
+
+.grid {
+    display:grid;
+    grid-auto-flow: column;
+    border: 1px solid red;
+    background: pink
+}
+
+.prawa img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.lewa {
+    display:grid;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(135deg,  hsl(0, 0%, 100%),  hsl(0, 100%, 98%))
+}
+.logo  {
+    grid-row: 1;
+    grid-column:1;
+    z-index: 1;
+}
+
+.logo {
+    width: 20%;
+    margin-top: 7%;
+    margin-left: 25%;
+}
+    
+
+.text {
+    grid-row: 1;
+    grid-column:1;
+    display: flex;
+    flex-direction: column;
+    margin: 25% 15% 15% 25%;
+    padding-right: 10%;
+}
+
+span {
+    font-size: 56px;
+    letter-spacing: 15px
+}
+
+.line-1 {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.line-2 {
+    font-weight: 400;
+}
+
+.text p {
+    font-size: 16px;
+    padding-top: 20px;
+    font-weight: 600;
+    color: hsl(0, 36%, 70%);
+    line-height: 25px
+}
+
+.email {
+    border: 1px solid hsl(0, 36%, 70%);
+    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    border-radius: 25px;
+   
+
+}
+
+#email {
+    border: none;
+    width: 100%;
+    padding-left: 30px;
+    background: none;
+    height: 100%;
+    font-family: josefin sans;
+    color: hsl(0, 36%, 70%)
+}
+
+::placeholder {
+    color: hsl(0, 36%, 70%);
+    opacity: 0.8;
+}
+
+#button {
+    background: url(../images/icon-arrow.svg), linear-gradient(135deg,  hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    border: 2px solid hsl(0, 36%, 70%) ;
+    border-radius: 25px;
+    width: 100px;
+    height: 100%;
+}
+
+#button:hover {
+    zoom: 0.9;
+    cursor: pointer;
+}
+
+#button input:focus {
+
+}
+
+.email input:focus{
+    outline: none;
+    background: transparent;
+    color: hsl(0, 36%, 70%);
+    opacity: 0.3
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.lewa  .pattern {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1;
+    grid-column:1;
+    
+}
+
+/* @mediaQ */
+@media (max-width: 700px) {
+    .container {
+      min-width: 300px;
+      padding: 100px 5px 5px 5px;
+      height: 100vh;
+      overflow: visible;
+    }
+
+    .grid {
+        display: grid;
+        grid-auto-flow: row;
+        background: transparent;
+        height: 
+    }
+    
+    .logo {
+        width: 25%;
+        height: auto;
+        position: absolute;
+        top: 2%
+      
+    }
+
+    .lewa {
+        order: 2;
+        height: 65vh;
+    }
+
+    .prawa img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .text {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .text p {
+        line-height: 30px;
+    }
+
+    .lewa {
+        height: 100%
+    }
+
+   
+    
+
+   
+}
